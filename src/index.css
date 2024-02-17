@@ -6,17 +6,33 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+
+    margin: 0;
+    height: 100vh;
+    font-weight: 100;
+    background-image: linear-gradient(180deg, #dc8b8b,#e6c1c1);
+    -webkit-overflow-Y: hidden;
+    -moz-overflow-Y: hidden;
+    -o-overflow-Y: hidden;
+    overflow-y: hidden;
+    -webkit-animation: fadeIn 1 1s ease-out;
+    -moz-animation: fadeIn 1 1s ease-out;
+    -o-animation: fadeIn 1 1s ease-out;
+    animation: fadeIn 1 1s ease-out;
+
 }
 
 .navbar{
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  border-bottom: 2px solid rgb(220, 220, 220);
+  justify-content: center;
+  font-size: 2rem;
+  /*border-bottom: 2px solid rgb(220, 220, 220);*/
 }
 
 .navbar h1{
   color: rgb(225, 50, 85);
+  padding-left: 5rem;
 }
 
 .links{
@@ -67,6 +83,7 @@ div.title-body{
   flex: 1;
   text-align: start;
   margin-right: 3%;
+
 }
 
 h2.title{
@@ -169,4 +186,67 @@ p.blog-body{
   color: white;
   border: 1px solid white;
   background-color: rgb(225, 50, 85);
+}
+
+/*Navbar*/
+
+h1.attendify{
+  font-size: 60px;
+  color: #ffffff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes attendify {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+/*Attendence*/
+div.table{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.mwaa{
+  display: flex;
+}
+
+p.heading{
+  color: white;
+  font-weight: 600;
+  font-size: large;
+  display: flex;
+  padding: 1rem 2.3rem;
+  margin: 0;
+
+}
+
+/*details*/
+div.detail{
+  display: flex;
+  flex-direction: row;
+
+}
+
+p.detail-item{
+  color: white;
+  width: 50px;
+  margin: 0.1rem 0.1rem;
+  padding: 1rem 2rem;
+  /*border: solid 1px black;*/
+  background-color: rgb(46, 46, 46, 0.2);
+  border-radius: 0rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(100px);
+  box-shadow: 0 4px 8px 0 rgba(239, 72, 72, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+
 }
