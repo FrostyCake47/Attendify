@@ -1,7 +1,8 @@
 import cv2
 import os
 
-video = cv2.VideoCapture('http://192.168.29.118:8080/video')
+#video = cv2.VideoCapture('http://192.168.29.118:8080/video')
+video = cv2.VideoCapture(0)
 
 facedetect = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
 
