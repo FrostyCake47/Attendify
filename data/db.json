@@ -1,0 +1,32 @@
+{
+  "blogs": [
+    {
+      "id": "2",
+      "title": "Look a cat!!",
+      "body": "so an adorabli cat todday.. mwaa adorabliiiii ",
+      "date": "5/2/24",
+      "time": "8:40am"
+    },
+    {
+      "id": "3",
+      "title": "Mwaa thats cute",
+      "body": "aint that cute, mwaa aint that cute mwaa.. yea",
+      "date": "7/2/24",
+      "time": "12:20pm"
+    },
+    {
+      "id": "124a",
+      "title": "Lets see if this works",
+      "body": "weoww im surprised",
+      "date": "11/02/24",
+      "time": "09:24 PM"
+    },
+    {
+      "id": "2025",
+      "title": "aaa",
+      "body": "mwaaaaa",
+      "date": "18/02/24",
+      "time": "01:30 AM"
+    }
+  ]
+}
