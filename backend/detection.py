@@ -67,7 +67,7 @@ while True:
     print(successiveCount)
     print("Class:", class_name[2:]+':')
 
-    if successiveCount > 20 or cv2.waitKey(1) & 0xFF == ord('q'):
+    if successiveCount > 20:
         print("Class:", class_name[2:]+':')
         print("Confidence Score:", confidence_score)
 
@@ -75,13 +75,14 @@ while True:
             attendenceJSON = json.load(json_file)
 
         attendenceJSON["details"][index]["status"] = True
+        #break
+        successiveCount = 0
+        with open('db.json', "w") as json_file:
+            json.dump(attendenceJSON, json_file)
+            print(attendenceJSON)
+
+    if cv2.waitKey(1) & 0xFF == ord('q'):
         break
-
-
-print(attendenceJSON)
-
-with open('db.json', "w") as json_file:
-    json.dump(attendenceJSON, json_file)
 
 # Release the webcam and close all OpenCV windows
 cap.release()
