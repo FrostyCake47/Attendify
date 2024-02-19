@@ -31,7 +31,7 @@ React Js (Frontend)<br />
 Json-Server<br />
 
 ## How to configure
-
+Download the files or clone this repository to your local device
 
 ## How to Run
 ```npm start run``` for running the app <br />
