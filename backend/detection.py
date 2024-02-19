@@ -12,12 +12,12 @@ model = load_model("keras_Model.h5", compile=False)
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
 
-try:
-    cap = cv2.VideoCapture('http://192.168.29.118:8080/video')
+'''try:
+    cap = cv2.VideoCapture('http://192.168.18.212:8080/video')
 except:
     cap = cv2.VideoCapture(0)
-
-
+'''
+cap = cv2.VideoCapture(0)
 
 
 successiveCount = 0
@@ -68,6 +68,9 @@ while True:
     print("Class:", class_name[2:]+':')
 
     if successiveCount > 20:
+        cv2.putText(frame, f"Person: {class_name[2:]}", (10, 90), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+        cv2.putText(frame, f"Attendence registered", (10, 120), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+
         print("Class:", class_name[2:]+':')
         print("Confidence Score:", confidence_score)
 
@@ -80,6 +83,9 @@ while True:
         with open('db.json', "w") as json_file:
             json.dump(attendenceJSON, json_file)
             print(attendenceJSON)
+
+        
+        cv2.waitKey(2000)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break

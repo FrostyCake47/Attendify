@@ -17,6 +17,7 @@ data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 video = cv2.VideoCapture(0)
 facedetect = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
 
+
 def getImage():
     rect, frame = video.read()
     faces = facedetect.detectMultiScale(frame, 1.3, 5)
@@ -29,6 +30,7 @@ def getImage():
     cv2.waitKey(1)
 
 isDetected = True
+
 
 while isDetected != False:
     # Replace this with the path to your image
