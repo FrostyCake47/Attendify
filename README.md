@@ -3,8 +3,9 @@
 
 
 
-# Project Name
-Long Description about project. This project do that. This project is awesome...
+# Attendify
+A Web App which can authenticate your attendence through face detection. Can be implemented in places such as schools and offices making the process of verifying a person's prescence more seamless
+
 ## Team members
 [Akash P](https://github.com/FrostyCake47) <br />
 [Nanda Krishna](https://github.com/frostyscupcake) <br />
@@ -12,11 +13,15 @@ Long Description about project. This project do that. This project is awesome...
 [B Jayalakshmi](https://github.com/BJayalakshmi) <br />
 
 ## Link to product walkthrough
-[link to video](Link Here)
+
 ## How it Works ?
 
-1. Explaining the working of project
-2. Embed video of project demo
+The dataset of the members are trained through and model in [Teachable Machine](https://teachablemachine.withgoogle.com/train/image) and model is to exported with the setting for KerasCV. Alternatively we can also use the ```datacollection.py``` for creating separate classes for models too. <br/>
+The model is then loaded and a video stream of an attendee is provided using OpenCV. <br/>
+during the process the face of the attendee is used to predict for matching classes in the trained model. When the model finds a success thier prescence is noted down in a database. `backend\db.json` in this context <br/>
+Json-server is used to watch over this database and a fetch request can be placed to access this data for the frontend part.
+
+
 ## Libraries used
 
 Keras CV, TensorFlow<br />
