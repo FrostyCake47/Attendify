@@ -20,7 +20,7 @@ The dataset of the members are trained through and model in [Teachable Machine](
 The model is then loaded and a video stream of an attendee is provided using OpenCV. <br/>
 during the process the face of the attendee is used to predict for matching classes in the trained model. When the model finds a success thier prescence is noted down in a database. `backend\db.json` in this context <br/>
 Json-server is used to watch over this database and a fetch request can be placed to access this data for the frontend part.
-
+![Attendify](Attendify.png)
 
 ## Libraries used
 
